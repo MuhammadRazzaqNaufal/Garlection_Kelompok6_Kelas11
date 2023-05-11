@@ -1,3 +1,36 @@
+<?php
+session_start();
+include'proses/connect.php';
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+  // Ambil data dari form
+  $username = $_POST['username'];
+  $password = $_POST['password'];
+
+  // Cari pengguna berdasarkan username dan password
+  $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+  $result = mysqli_query($conn, $query);
+
+  // Jika pengguna ditemukan
+  if (mysqli_num_rows($result) == 1) {
+    // Ambil data pengguna
+    $user = mysqli_fetch_assoc($result);
+
+    // Simpan data pengguna ke session
+    $_SESSION['user_id'] = $user['id'];
+    $_SESSION['username'] = $user['username'];
+    $_SESSION['phone'] = $user['phone'];
+    $_SESSION['email'] = $user['email'];
+
+    // Redirect ke halaman dashboard
+    header('Location: home.php');
+    exit;
+  } else {
+    // Jika pengguna tidak ditemukan
+    $error = 'Username atau password salah';
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +60,13 @@
             <img src="assets/garlection behbroh (1) 1.svg" alt="">
           </div>
           <div class="card-body">
+            <?php
+              if (isset($errorMessage)) {
+                echo '<div class="alert alert-danger">' . $errorMessage . '</div>';
+              }
+            ?>
             <img src="gambar.png" alt="" class="mx-auto d-block">
-            <form action="home.html">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>">
 
               <div class="form-group">
                 <label for="username">Username:</label>
@@ -40,6 +78,13 @@
               </div>
               <button type="submit" class="btn btn-primary">Login</button>
             </form>
+            <div class="card-footer text-center">
+          <p>Belum punya akun? <a href="index.php">Daftar sekarang!</a></p>
+        </div>
+
+        <div class="card-footer text-center">
+          <p><a href="admin/login.php">masuk sebagai petugas</a></p>
+        </div>
           </div>
         </div>
       </div>

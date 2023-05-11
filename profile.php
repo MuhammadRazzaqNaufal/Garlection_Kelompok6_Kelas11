@@ -1,3 +1,8 @@
+<?php
+session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,16 +29,16 @@
           <a class="nav-link" href="map.html">Lokasi Saya</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="jadwal.html">Jadwal Pengangkutan Sampah</a>
+          <a class="nav-link" href="jadwal.php">Jadwal Pengangkutan Sampah</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="lokasi.html">Lokasi Penampungan Sampah</a>
+          <a class="nav-link" href="lokasi.php">Lokasi Penampungan Sampah</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="history.html">History</a>
+          <a class="nav-link" href="history.php">History</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-user"></i></a>
+          <a class="nav-link" href="profile.php"><i class="fas fa-user"></i></a>
         </li>
       </ul>
     </div>
@@ -43,20 +48,25 @@
     <div class="row">
       <div class="col-md-4 offset-md-4">
         <div class="text-center mb-3">
-          <img src="https://via.placeholder.com/150" class="rounded-circle" alt="Profile Picture" width="150">
+          <img src="<?php echo $data['photo']; ?>" class="rounded-circle" alt="Profile Picture" width="150">
         </div>
         <div class="card">
           <div class="card-body">
-            <h5 class="card-title">John Doe</h5>
-            <p class="card-text">Email: johndoe@example.com</p>
-            <p class="card-text">Phone: 123-456-7890</p>
-            <a href="#" class="btn btn-primary">Edit Profile</a>
+            <h5 class="card-title"><?php echo $_SESSION['username']; ?></h5>
+            <p class="card-text">email: <?php echo $_SESSION['email'];?></p>
+            <p class="card-text">No_telepon: <?php echo $_SESSION['phone'];?></p>
           </div>
         </div>
       </div>
     </div>
   </div>
-  
 
-  <!-- Library JavaScript Bootstrap -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-7vMRLg+5AbZ2SPB9z/kePdJNl4xB4D/Fl83TkbqsCV6KuJrxU
+  <div class="text-center">
+    <a href="login.php" class="btn btn-danger" > Log Out</a>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</body>
+</html>
+

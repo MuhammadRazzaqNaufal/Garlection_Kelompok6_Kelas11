@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -37,8 +38,8 @@
     </div>
   </nav>
 
-  <!-- Jumbotron -->
-  <div class="jumbotron jumbotron-fluid">
+<!-- Jumbotron -->
+<div class="jumbotron jumbotron-fluid">
     <div class="container">
       <h1 class="display-4">Berita Terkini</h1>
       <p class="lead">Dapatkan informasi terbaru mengenai lingkungan sekitar dan update terbaru mengenai pembuangan sampah di sini.</p>
@@ -58,10 +59,29 @@
             <p class="card-text">Pemerintah setempat melakukan penanaman pohon di taman kota sebagai bagian dari upaya pelestarian lingkungan.</p>
           </div>
           <div class="card-footer">
-            <a href="#" class="btn btn-primary">Selengkapnya</a>
+            <a href="berita.html" class="btn btn-primary">Selengkapnya</a>
           </div>
         </div>
       </div>
 
-      <!-- Berita 2 -->
-      <div
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi4jq7Y"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/esm/popper-base"
+    integrity="sha256-wopxtwmpjr2zCgnrdiJysMz6H+yU6BjlU6B0gECgi2k=" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+<!-- Konten tambahan -->
+<footer>
+  <p></p>
+</footer>
+
+</html>
