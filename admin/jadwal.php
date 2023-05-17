@@ -1,5 +1,5 @@
 <?php
-include'proses/connect.php';
+include'../proses/connect.php';
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@ include'proses/connect.php';
   <div class="background"></div>
   <style>
     .background {
-      background-image: url("assets/gambar3.jpg");
+      background-image: url("../assets/gambar3.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center center;
@@ -34,9 +34,27 @@ include'proses/connect.php';
 </head>
     
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-<a class="navbar-brand" href="home.php">
-      <img src="assets/garlection behbroh (1) 1.svg" alt="" width="49">
+    <a class="navbar-brand" href="home.php">
+      <img src="../assets/garlection behbroh (1) 1.svg" alt="" width="49">
       Garlection</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="../profile.php"> Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="berita.php">Berita Terkini</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="../petugas/dftr_permintaan_pengangkutan.php"> Daftar Permintaan Pengangkutan</a>
+        </li>
+      </ul>
+    </div>
   </nav>
 
   <div class="container mt-5">
@@ -86,14 +104,12 @@ include'proses/connect.php';
             ?>
           </tbody>
         </table>
+        <a href="updatejdwl.php" class="btn btn-primary">Update Jadwal</a>
       </div>
     </div>
   </div>
 </div>
 
-        
-      </div>
-    </div>
-  </div>
+
 </body>
 </html>

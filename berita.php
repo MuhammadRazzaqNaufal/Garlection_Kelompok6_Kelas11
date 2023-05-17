@@ -10,13 +10,32 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <div class="background"></div>
+    <style>
+        .background {
+            background-image: url("assets/gambar3.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        
+        #map {
+            height: 400px;
+        }
+    </style>
 </head>
 
 <body>
 
   <!-- Navbar -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="home.php">
       <img src="assets/garlection behbroh (1) 1.svg" alt="" width="49">
       Garlection</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
@@ -26,13 +45,13 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link" href="profile.html"><i class="bi bi-person"></i> Profile</a>
+          <a class="nav-link" href="profile.php"><i class="bi bi-person"></i> Profile</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="berita.html"><i class="bi bi-newspaper"></i> Berita Terkini</a>
+          <a class="nav-link" href="berita.php"><i class="bi bi-newspaper"></i> Berita Terkini</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="request.html"><i class="bi bi-truck"></i> Request Pengangkutan Sampah</a>
+          <a class="nav-link" href="request.php"><i class="bi bi-truck"></i> Request Pengangkutan Sampah</a>
         </li>
       </ul>
     </div>
@@ -59,7 +78,38 @@
             <p class="card-text">Pemerintah setempat melakukan penanaman pohon di taman kota sebagai bagian dari upaya pelestarian lingkungan.</p>
           </div>
           <div class="card-footer">
-            <a href="berita.html" class="btn btn-primary">Selengkapnya</a>
+            <a href="detail/hlmberita1.php" class="btn btn-primary">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Berita 2 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="assets/berita1.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Banda Aceh, mengelola sampah untuk menghijaukan kota</h4>
+            <p class="card-text">TPA Gampong Jawa Banda Aceh terdapat 14 hidrolisis, tempat tersebut digunakan untuk 
+          pembusukan sampah organik yang dikutip dari pasar dan perumahan masyarakat, kemudian 
+          disulap menjadi pupuk kompos.</p>
+          </div>
+          <div class="card-footer">
+            <a href="detail/hlmberita2.php" class="btn btn-primary">Selengkapnya</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Berita 3 -->
+      <div class="col-lg-4 col-md-6 mb-4">
+        <div class="card h-100">
+          <img class="card-img-top" src="assets/berita1.jpg" alt="">
+          <div class="card-body">
+            <h4 class="card-title">Produksi Sampah Banda Aceh Capai 240 Ton Per Hari</h4>
+            <p class="card-text">DLHK3 Banda Aceh mencatat, sampah yang dikumpulkan per hari di kota tersebut 
+          lebih kurang mencapai 24 ton per hari baik itu organik maupun an organik.</p>
+          </div>
+          <div class="card-footer">
+            <a href="detail/hlmberita3.php" class="btn btn-primary">Selengkapnya</a>
           </div>
         </div>
       </div>

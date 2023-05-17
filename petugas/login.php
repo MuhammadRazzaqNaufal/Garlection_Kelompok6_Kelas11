@@ -1,13 +1,13 @@
 <?php
 session_start();
-include'proses/connect.php';
+include'../proses/connect.php';
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   // Ambil data dari form
   $username = $_POST['username'];
   $password = $_POST['password'];
 
   // Cari pengguna berdasarkan username dan password
-  $query = "SELECT * FROM users WHERE username='$username' AND password='$password'";
+  $query = "SELECT * FROM petugas WHERE username='$username' AND password='$password'";
   $result = mysqli_query($conn, $query);
 
   // Jika pengguna ditemukan
@@ -37,7 +37,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Login</title>
+  <title>Login Petugas</title>
   <!-- library Bootstrap -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -57,7 +57,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <h4>Login</h4>
           </div>
           <div class="text-center">
-            <img src="assets/garlection behbroh (1) 1.svg" alt="">
+            <img src="../assets/garlection behbroh (1) 1.svg" alt="">
           </div>
           <div class="card-body">
             <?php
@@ -78,18 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
               </div>
               <button type="submit" class="btn btn-primary">Login</button>
             </form>
-            <div class="card-footer text-center">
-          <p>Belum punya akun? <a href="index.php">Daftar sekarang!</a></p>
-        </div>
-
-        <div class="card-footer text-center">
-          <p><a href="admin/login.php">masuk sebagai Admin</a></p>
-        </div>
-
-        <div class="card-footer text-center">
-          <p><a href="petugas/login.php">masuk sebagai petugas</a></p>
-        </div>
-
+            
           </div>
         </div>
       </div>

@@ -12,14 +12,13 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   $sql = "INSERT INTO permintaan_pengangkutan_sampah (nama, alamat, nohp) VALUES ('$nama', '$alamat', '$nohp')";
   
   if ($conn->query($sql) === TRUE) {
-    header('Location: home.php');
+    header('Location: hlmkonfirmasi.php');
     echo "Data berhasil ditambahkan";
   } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
   }
 
 }
-
 ?>
 
 <!DOCTYPE html>

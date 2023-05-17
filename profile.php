@@ -14,11 +14,29 @@ session_start();
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <!-- Fontawesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-AfdpaOcFYYxvOOF8tZ+P9xcLXSztTvp1/TiC8WfD1kuInq3V7xSsyvtdccVpKj9XFLMno7Q4nwL4iF/LyyCmRw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+  <div class="background"></div>
+    <style>
+      .background {
+    background-image: url("assets/gambar3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+      </style>
+      
+    </div>
+  </head>
 <body>
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="home.html">Garlection</a>
+    <a class="navbar-brand" href="home.php">Garlection</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -60,8 +78,9 @@ session_start();
       </div>
     </div>
   </div>
-
+  
   <div class="text-center">
+  <a href="ubah_password.php" class="btn btn-primary">Ubah Password</a>
     <a href="login.php" class="btn btn-danger" > Log Out</a>
   </div>
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
